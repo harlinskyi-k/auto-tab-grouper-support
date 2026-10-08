@@ -13,6 +13,10 @@ Auto Tab Grouper is a browser extension that puts your open tabs into Chrome tab
 
 **Auto Tab Grouper does not collect, transmit, sell or share any personal data.** Everything happens locally in your browser. The extension makes no network requests, has no analytics or tracking, and loads no remote code.
 
+## Limited Use
+
+The use of information that Auto Tab Grouper receives through Chrome's extension APIs (such as the addresses and titles of your tabs) adheres to the [Chrome Web Store User Data Policy](https://developer.chrome.com/docs/webstore/program-policies/user-data-faq), including the [Limited Use](https://developer.chrome.com/docs/webstore/program-policies/limited-use) requirements. This data is used only to provide the extension's single purpose — organizing your tabs into groups — is never sold, never used for advertising or credit decisions, and is not read by people.
+
 ## What the extension accesses and why
 
 | Data | Why it is needed | Where it stays |
