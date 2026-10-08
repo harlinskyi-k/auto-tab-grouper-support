@@ -1,0 +1,39 @@
+name: Problem
+description: Something doesn't work as expected.
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: rules
+    attributes:
+      label: Rules involved
+      description: The rule (group name and patterns) and an example address, if the problem is about grouping. Remove anything private.
+      placeholder: |
+        Group: Dev
+        Patterns: github.com, gitlab.com
+        Address: https://github.com/…
+  - type: input
+    id: version
+    attributes:
+      label: Extension version
+      description: At the bottom of Settings in the extension, or chrome://extensions → Auto Tab Grouper → Details.
+      placeholder: "2.0.0"
+    validations:
+      required: true
+  - type: input
+    id: chrome
+    attributes:
+      label: Chrome version and operating system
+      description: chrome://settings/help
+      placeholder: Chrome 140, Windows 11
+  - type: textarea
+    id: more
+    attributes:
+      label: Anything else
+      description: Screenshots, the interface language, settings you changed…
