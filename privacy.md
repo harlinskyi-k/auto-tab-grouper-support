@@ -38,6 +38,10 @@ The extension does **not** read page content, form data, passwords, cookies, bro
 - **alarms** — timers for the optional “Sleep inactive groups” and delayed “Collapse inactive groups” settings.
 - **sidePanel** — open the extension in Chrome's side panel, if you choose to.
 
+## Reporting a problem
+
+**Report a problem** in the extension opens the support page in a new tab. The extension adds its version, the Chrome version, the operating system, the interface language and where you opened it from (popup, side panel or page) to that page's address, so you don't have to look them up. Nothing is sent until you choose to write: the short form is run by [Tally](https://tally.so/help/privacy-policy), an issue by GitHub, an email by your mail provider. What you write there, and your email address if you leave it, is used only to answer you.
+
 ## Export files
 
 If you use **Export**, the extension creates a JSON file with your rules and settings and saves it where you choose. That file is only on your computer; the extension never uploads it.
