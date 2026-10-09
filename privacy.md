@@ -5,7 +5,7 @@ permalink: /privacy/
 
 # Privacy Policy — Auto Tab Grouper
 
-_Last updated: 2026-10-08_
+_Last updated: 2026-10-09_
 
 Auto Tab Grouper is a browser extension that puts your open tabs into Chrome tab groups according to rules you write. This policy explains what the extension does with your data.
 
@@ -25,13 +25,18 @@ The use of information that Auto Tab Grouper receives through Chrome's extension
 | Your tab groups (title, color, collapsed state) | To create, reuse, reorder, collapse or ungroup the groups made by your rules | In memory only |
 | Your rules and settings | So the extension remembers what you configured | `chrome.storage.sync` — Chrome's own storage. If you have Chrome Sync turned on, Chrome syncs it between your browsers through your Google account, the same as other extension settings |
 | A temporary list of tabs you moved by hand, and when each rule group was last used | So the extension doesn't move them back, and can put unused groups to sleep if you enable it | `chrome.storage.session` — in memory, deleted when the browser closes |
+| The address, title and place of the last duplicate tab the extension closed (only if you chose to close duplicates) | So the popup can offer to reopen it | `chrome.storage.session` — in memory, deleted when you reopen it or the browser closes |
 | Sites you dismissed from “Suggested groups” | So the same suggestion isn't shown again | `chrome.storage.local` — on this computer only |
-| Groups you save with **Save** (group name, color, and the addresses and titles of its tabs) | So you can reopen the group later | `chrome.storage.local` — on this computer only, until you delete the saved group |
-| Names of groups created for sites without a rule, with the site they belong to | So these groups are recognized after a browser restart | `chrome.storage.local` — on this computer only |
-| Titles and site names of the tabs no rule matches, when you click **Group by topic** | To let Chrome's built-in AI model (Gemini Nano) suggest topic groups | Passed to the model that Chrome runs on your device; nothing is sent over the network and nothing is stored. Chrome itself downloads the model from Google the first time it is used, as for any Chrome feature that uses it |
+| Groups you save with **Save** (group name, color, and the addresses and titles of its tabs) | So you can reopen the group later | `chrome.storage.local` — on this computer only, until you delete the saved group. Groups of incognito windows can't be saved |
+| Names of groups created for sites without a rule, with the site they belong to | So these groups are recognized after a browser restart | `chrome.storage.local` — on this computer only. For incognito windows: `chrome.storage.session` only — in memory, deleted when the browser closes, never written to disk |
+| Only when you click one of the AI buttons: **Group by topic** — titles and site names of the tabs no rule matches; **Fit into rules** — titles and addresses (without the part after “?”) of those tabs, and the names and patterns of your rules; **Suggest patterns** — titles and addresses (without the part after “?”) of the tabs in the group you picked; **Suggest a name** — the patterns in the rule form, the titles of open tabs they match and the names of your rules | To let Chrome's built-in AI model (Gemini Nano) suggest topic groups, the rule a tab belongs to, patterns or a group name. Nothing changes until you accept a suggestion | Passed to the model that Chrome runs on your device; nothing is sent over the network and nothing is stored. Chrome itself downloads the model from Google the first time it is used, as for any Chrome feature that uses it |
 | Install date and the number of tabs the extension has grouped, plus whether you answered the rating prompt | To show the “Rate this extension” card only after the extension has been useful, and never again once you answer it | `chrome.storage.local` — on this computer only, never sent anywhere |
 
 The extension does **not** read page content, form data, passwords, cookies, browsing history or any other information.
+
+## Incognito windows
+
+The extension works in incognito windows only if you allow it on Chrome's extension page. Even then, nothing from an incognito window is written to disk: its groups can't be saved, and the names of site groups made there are kept in memory only until the browser closes.
 
 ## Permissions
 
